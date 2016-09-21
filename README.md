@@ -1,19 +1,20 @@
-# BigramsSockets
-Un proyecto de Cliente-Servidor con sockets donde el cliente pide la cantidad de veces que aparece un bigrama y el servidor le responde.
+
+# BigramsRMI
+Contador de Bigramas Cliente-Servidor usando Java RMI.
 
 ## Como compilar
 * `javac Cliente.java`
 * `javac Servidor.java`
+* `javac ServidorImplementation.java`
+* `rmic ServidorImplementation`
 
 ## Como correr
-Abrir dos terminales (pueden ser mas clientes porque aguanta concurrencia por medio de hilos):
-  1. java Servidor
-  2. java Cliente
+Abrir tres terminales:
+  1. `rmiregistry &`
+  2. `java ServidorImplementation`
+  3. `java Cliente`
 
 ## Imagenes
 
-### Servidor
-![alt text](/images/servidor.png "Servidor")
-
-### Cliente
-![alt text](/images/cliente.png "Servidor")
+### Resultados
+![alt text](/images/rmi.png "RMI")
